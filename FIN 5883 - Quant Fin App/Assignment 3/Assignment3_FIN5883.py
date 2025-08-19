@@ -142,16 +142,6 @@ def backtest_strategy_extended(prices, signals):
 
 backtest_strategy_extended(prices, signals)
 
-##RSI
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import yfinance as yf
-from scipy.stats import ttest_1samp
-from time import time
-from datetime import datetime
-import scipy
-
 def fetch_data(ticker, start_date, end_date):
     data = yf.download(ticker, start=start_date, end=end_date)
     return data['Adj Close']
